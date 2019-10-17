@@ -1,0 +1,1234 @@
+fs/test.c:	// and is not free any more
+fs/test.c:	if ((r = file_open("/not-found", &f)) < 0 && r != -E_NOT_FOUND)
+fs/test.c:		panic("file_open /not-found: %e", r);
+fs/test.c:		panic("file_open /not-found succeeded!");
+fs/testshell.key:nostrud exercitation ullamco laboris
+fs/testshell.key:occaecat cupidatat non proident, sunt in
+fs/testshell.key:    5 nostrud exercitation ullamco laboris
+fs/testshell.key:   10 occaecat cupidatat non proident, sunt in
+fs/testshell.key:    5     5     5     5     5 nostrud exercitation ullamco laboris
+fs/testshell.key:   10    10    10    10    10 occaecat cupidatat non proident, sunt in
+fs/testshell.key:    5 nostrud exercitation ullamco laboris
+fs/testshell.key:   10 occaecat cupidatat non proident, sunt in
+grade-lab4:            no=["I read ........ from location 0."])
+grade-lab4:            no=["Registers in UTrapframe MISMATCH",
+grade-lab4:def test_faultnostack():
+grade-lab4:    r.user_test("faultnostack")
+grade-lab4:            no=[".*ran on two CPUs at once"])
+lib/Makefrag:	$(V)$(CC) -nostdinc $(USER_CFLAGS) -c -o $@ $<
+lib/Makefrag:	$(V)$(CC) -nostdinc $(USER_CFLAGS) -c -o $@ $<
+lib/entry.S:	// If not, push dummy argc/argv arguments.
+lib/entry.S:	// because the kernel does not know about passing arguments.
+lib/pfentry.S:// point to the user exception stack if we're not already on the user
+lib/pfentry.S://   note that the word we're pushing now will fit in the
+lib/pfentry.S:// may find that you have to rearrange your code in non-obvious
+lib/pfentry.S:   subl $4, %ebx		//Reserve slot for eip to be pushed on to the stack of either the environement that has faulted, if call to this handler is not recursive, or this handler itself, if call is recursive.
+lib/pfentry.S:   mov %eax, (%ebx)	//push eip on to the trap time stack, in case of recursive call, or on the stack of the faulting environment in case of non-recursive call.
+lib/pfentry.S:   addl $8, %esp		//skip the fault_va and error code since we have no use of them
+lib/pfentry.S:// can no longer modify any general-purpose registers.
+lib/pfentry.S:// no longer use arithmetic operations or anything else that
+lib/pfentry.S:addl $4, %esp		//We skip the trap time eip since it is no use to us.
+lib/pfentry.S:mov %eax, (%ebx) // now eip is in the trap-time stack
+lib/pfentry.S:	   // can no longer modify any general-purpose registers.
+lib/pfentry.S:	   // no longer use arithmetic operations or anything else that
+lib/libmain.c:const char *binaryname = "<unknown>";
+lib/fork.c:	   // copy-on-write page.  If not, panic.
+lib/fork.c:	   //panic("pgfault not implemented");
+lib/fork.c:	   //	   panic("duppage not implemented");
+lib/fork.c:	   //panic("fork not implemented");
+lib/fork.c:	   panic("sfork not implemented");
+lib/syscall.c:	// The "volatile" tells the assembler not to optimize
+lib/ipc.c:// If 'pg' is nonnull, then any page sent by the sender will be mapped at
+lib/ipc.c:// If 'from_env_store' is nonnull, then store the IPC sender's envid in
+lib/ipc.c:// If 'perm_store' is nonnull, then store the IPC sender's page permission
+lib/ipc.c://	in *perm_store (this is nonzero iff a page was successfully
+lib/ipc.c://	they're nonnull) and return the error.
+lib/ipc.c://   as meaning "no page".  (Zero is not the right value, since that's
+lib/ipc.c:	panic("ipc_recv not implemented");
+lib/ipc.c:// Send 'val' (and 'pg' with 'perm', if 'pg' is nonnull) to 'toenv'.
+lib/ipc.c://   as meaning "no page".  (Zero is not the right value.)
+lib/ipc.c:	panic("ipc_send not implemented");
+lib/ipc.c:// Returns 0 if no such environment exists.
+lib/string.c:// Basic string routines.  Not hardware optimized, but not shabby.
+lib/string.c:		/* do nothing */;
+lib/string.c:// or a null pointer if the string has no 'c'.
+lib/string.c:// or a pointer to the string-ending null character if the string has no 'c'.
+lib/console.c:	// sys_cgetc does not block, but getchar should.
+lib/pgfault.c:	   //panic("set_pgfault_handler not implemented");
+lib/printf.c:// cprintf is a debugging statement, not a generic output statement.
+lib/printfmt.c:	[E_IPC_NOT_RECV]= "env is not recving",
+lib/printfmt.c:				/* do nothing */;
+Binary file .git/index matches
+.git/FETCH_HEAD:a56269d4beefc7d0b3672180aa46c654cfb63af4	not-for-merge	branch 'lab1' of https://pdos.csail.mit.edu/6.828/2018/jos
+.git/FETCH_HEAD:2d1187aa3ce762bb4dbeb3cbe98fd6cd6753e997	not-for-merge	branch 'lab2' of https://pdos.csail.mit.edu/6.828/2018/jos
+.git/FETCH_HEAD:da1f8392b15e5bdab1b2e0138ce2f68ca65a1de0	not-for-merge	branch 'lab4' of https://pdos.csail.mit.edu/6.828/2018/jos
+.git/FETCH_HEAD:c67463e23c3d11f56627261db8e34dfa8f96bfa6	not-for-merge	branch 'lab5' of https://pdos.csail.mit.edu/6.828/2018/jos
+.git/FETCH_HEAD:e8e44c964db31b3c8fd4f1d49faad684abd78da3	not-for-merge	branch 'lab6' of https://pdos.csail.mit.edu/6.828/2018/jos
+.git/logs/refs/remotes/origin/HEAD:0000000000000000000000000000000000000000 a56269d4beefc7d0b3672180aa46c654cfb63af4 Avadhut Naik <avanaik@AVNaik.(none)> 1566337130 -0400	clone: from https://pdos.csail.mit.edu/6.828/2018/jos.git
+.git/logs/refs/heads/lab1:0000000000000000000000000000000000000000 a56269d4beefc7d0b3672180aa46c654cfb63af4 Avadhut Naik <avanaik@AVNaik.(none)> 1566337130 -0400	clone: from https://pdos.csail.mit.edu/6.828/2018/jos.git
+.git/logs/HEAD:0000000000000000000000000000000000000000 a56269d4beefc7d0b3672180aa46c654cfb63af4 Avadhut Naik <avanaik@AVNaik.(none)> 1566337130 -0400	clone: from https://pdos.csail.mit.edu/6.828/2018/jos.git
+.git/hooks/applypatch-msg.sample:# The hook should exit with non-zero status after issuing an
+.git/hooks/pre-push.sample:# pushed.  If this script exits with a non-zero status nothing will be pushed.
+.git/hooks/pre-push.sample:			echo >&2 "Found WIP commit in $local_ref, not pushing"
+.git/hooks/commit-msg.sample:# that has the commit message.  The hook should exit with non-zero
+.git/hooks/update.sample:# An example hook script to block unannotated tags from entering.
+.git/hooks/update.sample:# hooks.allowunannotated
+.git/hooks/update.sample:#   This boolean sets whether unannotated tags will be allowed into the
+.git/hooks/update.sample:allowunannotated=$(git config --bool hooks.allowunannotated)
+.git/hooks/update.sample:# check for no description
+.git/hooks/update.sample:		# un-annotated tag
+.git/hooks/update.sample:		if [ "$allowunannotated" != "true" ]; then
+.git/hooks/update.sample:			echo "*** The un-annotated tag, $short_refname, is not allowed in this repository" >&2
+.git/hooks/update.sample:			echo "*** Deleting a tag is not allowed in this repository" >&2
+.git/hooks/update.sample:		# annotated tag
+.git/hooks/update.sample:			echo "*** Modifying a tag is not allowed in this repository." >&2
+.git/hooks/update.sample:			echo "*** Creating a branch is not allowed in this repository" >&2
+.git/hooks/update.sample:			echo "*** Deleting a branch is not allowed in this repository" >&2
+.git/hooks/update.sample:			echo "*** Deleting a tracking branch is not allowed in this repository" >&2
+.git/hooks/update.sample:		echo "*** Update hook: unknown type of update to ref $refname of type $newrev_type" >&2
+.git/hooks/pre-applypatch.sample:# The hook should exit with non-zero status after issuing an
+.git/hooks/prepare-commit-msg.sample:# message file.  If the hook fails with a non-zero status,
+.git/hooks/pre-commit.sample:# Called by "git commit" with no arguments.  The hook should
+.git/hooks/pre-commit.sample:# exit with non-zero status after issuing an appropriate message if
+.git/hooks/pre-commit.sample:# If you want to allow non-ASCII filenames set this variable to true.
+.git/hooks/pre-commit.sample:allownonascii=$(git config --bool hooks.allownonascii)
+.git/hooks/pre-commit.sample:# Cross platform projects tend to avoid non-ASCII filenames; prevent
+.git/hooks/pre-commit.sample:if [ "$allownonascii" != "true" ] &&
+.git/hooks/pre-commit.sample:Error: Attempt to add a non-ASCII file name.
+.git/hooks/pre-commit.sample:If you know what you are doing you can disable this check using:
+.git/hooks/pre-commit.sample:  git config hooks.allownonascii true
+.git/hooks/pre-rebase.sample:# Copyright (c) 2006, 2008 Junio C Hamano
+.git/hooks/pre-rebase.sample:# non-zero status.
+.git/hooks/pre-rebase.sample:	exit 0 ;# we do not interrupt rebasing detached HEAD
+.git/hooks/pre-rebase.sample:	exit 0 ;# we do not interrupt others.
+.git/hooks/pre-rebase.sample:not_in_master=`git rev-list --pretty=oneline ^master "$topic"`
+.git/hooks/pre-rebase.sample:if test -z "$not_in_master"
+.git/hooks/pre-rebase.sample:	exit 1 ;# we could allow it, but there is no point.
+.git/hooks/pre-rebase.sample:# Is topic ever merged to next?  If so you should not be rebasing it.
+.git/hooks/pre-rebase.sample:	not_in_topic=`git rev-list "^$topic" master`
+.git/hooks/pre-rebase.sample:	if test -z "$not_in_topic"
+.git/hooks/pre-rebase.sample:		exit 1 ;# we could allow it, but there is no point.
+.git/hooks/pre-rebase.sample:	not_in_next=`git rev-list --pretty=oneline ^${publish} "$topic"`
+.git/hooks/pre-rebase.sample:		my (%not_in_next) = map {
+.git/hooks/pre-rebase.sample:			if (!exists $not_in_next{$elem->[0]}) {
+.git/hooks/pre-rebase.sample:	' "$topic" "$not_in_next" "$not_in_master"
+.git/hooks/pre-rebase.sample:   the tip of the "master".  This is not strictly necessary, but
+.git/hooks/pre-rebase.sample:With this workflow, you would want to know:
+.git/hooks/pre-rebase.sample:    clean up before publishing, and things that have not been
+.git/hooks/pre-rebase.sample:    not want to rewind it.
+.git/hooks/pre-rebase.sample:    Then you can delete it.  More importantly, you should not
+.git/hooks/pre-rebase.sample: * C has not merged to "next" at all.
+.git/hooks/pre-rebase.sample:	if these match, topic has not merged in next at all.
+Binary file .git/objects/b1/f37ea18368d8e0637eda45c3aa78219b00a5bd matches
+Binary file .git/objects/pack/pack-f44e4cbdf5a8812ed153d021f77741e19feef404.pack matches
+Binary file .git/objects/a1/c954cdd876c89dae2506db0eee2d2e36bd6d7d matches
+jos.out.sendpage:[00001000] user panic in <unknown> at lib/ipc.c:42: ipc_send not implemented
+boot/boot.S:  inb     $0x64,%al               # Wait for not busy
+boot/boot.S:  inb     $0x64,%al               # Wait for not busy
+boot/boot.S:  # effective memory map does not change during the switch.
+boot/main.c:	// load each program segment (ignores ph flags)
+boot/main.c:	// note: does not return!
+boot/main.c:		/* do nothing */;
+boot/main.c:		/* do nothing */;
+boot/Makefrag:	$(V)$(CC) -nostdinc $(KERN_CFLAGS) -Os -c -o $@ $<
+boot/Makefrag:	$(V)$(CC) -nostdinc $(KERN_CFLAGS) -c -o $@ $<
+boot/Makefrag:	$(V)$(CC) -nostdinc $(KERN_CFLAGS) -Os -c -o $(OBJDIR)/boot/main.o boot/main.c
+Binary file obj/lib/libmain.o matches
+Binary file obj/lib/ipc.o matches
+Binary file obj/lib/syscall.o matches
+Binary file obj/lib/printf.o matches
+Binary file obj/lib/exit.o matches
+Binary file obj/lib/string.o matches
+Binary file obj/lib/fork.o matches
+Binary file obj/lib/printfmt.o matches
+Binary file obj/lib/libjos.a matches
+Binary file obj/lib/console.o matches
+Binary file obj/lib/pgfault.o matches
+Binary file obj/lib/readline.o matches
+Binary file obj/lib/panic.o matches
+Binary file obj/boot/main.o matches
+obj/boot/boot.asm:  inb     $0x64,%al               # Wait for not busy
+obj/boot/boot.asm:  inb     $0x64,%al               # Wait for not busy
+obj/boot/boot.asm:  # effective memory map does not change during the switch.
+obj/boot/boot.asm:		/* do nothing */;
+obj/boot/boot.asm:	// load each program segment (ignores ph flags)
+obj/boot/boot.asm:	// load each program segment (ignores ph flags)
+obj/boot/boot.asm:	// load each program segment (ignores ph flags)
+obj/boot/boot.asm:	// note: does not return!
+obj/.vars.USER_CFLAGS:   -O1 -fno-builtin -I. -MD -fno-omit-frame-pointer -std=gnu99 -static -fno-pie -Wall -Wno-format -Wno-unused -Werror -gstabs -m32 -fno-tree-ch -fno-stack-protector -DJOS_USER -gstabs
+obj/.vars.KERN_LDFLAGS:-m elf_i386 -T kern/kernel.ld -nostdlib
+Binary file obj/kern/env.o matches
+Binary file obj/kern/kdebug.o matches
+Binary file obj/kern/syscall.o matches
+Binary file obj/kern/printf.o matches
+Binary file obj/kern/kernel.img matches
+Binary file obj/kern/kclock.o matches
+Binary file obj/kern/init.o matches
+Binary file obj/kern/trap.o matches
+Binary file obj/kern/spinlock.o matches
+Binary file obj/kern/string.o matches
+Binary file obj/kern/sched.o matches
+Binary file obj/kern/printfmt.o matches
+obj/kern/kernel.sym:00008980 A _binary_obj_user_faultnostack_size
+obj/kern/kernel.sym:f0120200 d normalmap
+obj/kern/kernel.sym:f01d46f0 D _binary_obj_user_faultnostack_start
+obj/kern/kernel.sym:f01dd070 D _binary_obj_user_faultnostack_end
+Binary file obj/kern/pmap.o matches
+Binary file obj/kern/console.o matches
+Binary file obj/kern/kernel matches
+Binary file obj/kern/picirq.o matches
+Binary file obj/kern/lapic.o matches
+Binary file obj/kern/monitor.o matches
+Binary file obj/kern/entrypgdir.o matches
+Binary file obj/kern/readline.o matches
+obj/kern/kernel.asm:	# now to C code
+obj/kern/kernel.asm:	// Starting non-boot CPUs
+obj/kern/kernel.asm:	// We are in high EIP now, safe to switch to kern_pgdir 
+obj/kern/kernel.asm:	// The + in "+m" denotes a read-modify-write operand.
+obj/kern/kernel.asm:	// Ignore data from mouse.
+obj/kern/kernel.asm: * Return -1 if no data.
+obj/kern/kernel.asm:f010030b:	f7 d0                	not    %eax
+obj/kern/kernel.asm:f0100387:	f7 d0                	not    %eax
+obj/kern/kernel.asm:	// Ignore data from mouse.
+obj/kern/kernel.asm:	// if no attribute given, then use black on white
+obj/kern/kernel.asm:// return the next input character from the console, or 0 if none waiting
+obj/kern/kernel.asm:		cprintf("Serial port does not exist!\n");
+obj/kern/kernel.asm:		/* do nothing */;
+obj/kern/kernel.asm:	   cprintf("Unknown command '%s'\n", argv[0]);
+obj/kern/kernel.asm:	   // the first virtual address that the linker did *not* assign
+obj/kern/kernel.asm:			 // list, since entry_pgdir does not map all pages.
+obj/kern/kernel.asm:			 // list, since entry_pgdir does not map all pages.
+obj/kern/kernel.asm:	   // Hint: You may want to panic if pp->pp_ref is nonzero or
+obj/kern/kernel.asm:	   // pp->pp_link is not NULL.
+obj/kern/kernel.asm:// freeing it if there are no more refs.
+obj/kern/kernel.asm:		 panic ("boot_map_region cannot be executed \n");
+obj/kern/kernel.asm:	   uint32_t no_pages = size / PGSIZE;
+obj/kern/kernel.asm:	   for (int i = 0; i < no_pages; i ++)
+obj/kern/kernel.asm:		 panic ("boot_map_region cannot be executed \n");
+obj/kern/kernel.asm:	   uint32_t no_pages = size / PGSIZE;
+obj/kern/kernel.asm:	   for (int i = 0; i < no_pages; i ++)
+obj/kern/kernel.asm:		 panic ("boot_map_region cannot be executed \n");
+obj/kern/kernel.asm:	   uint32_t no_pages = size / PGSIZE;
+obj/kern/kernel.asm:	   for (int i = 0; i < no_pages; i ++)
+obj/kern/kernel.asm:// location.  Return the base of the reserved region.  size does *not*
+obj/kern/kernel.asm:	   //panic("mmio_map_region not implemented");
+obj/kern/kernel.asm:// From UTOP to ULIM, the user is allowed to read but not write.
+obj/kern/kernel.asm:// Above ULIM the user cannot read or write.
+obj/kern/kernel.asm:	   //	   panic("mem_init: This function is not finished\n");
+obj/kern/kernel.asm:	   // (For now, you don't have understand the greater purpose of the
+obj/kern/kernel.asm:	   // particular, we can now map memory using boot_map_region
+obj/kern/kernel.asm:	   // should be no free memory
+obj/kern/kernel.asm:	   // should be no free memory
+obj/kern/kernel.asm:	   // there is no page allocated at address 0
+obj/kern/kernel.asm:	   // there is no free memory, so we can't allocate a page table
+obj/kern/kernel.asm:	   // should be no free memory
+obj/kern/kernel.asm:	   // should not be able to map at PTSIZE because need free page for page table
+obj/kern/kernel.asm:	   // should have pp1 at both 0 and PGSIZE, pp2 nowhere, ...
+obj/kern/kernel.asm:	   // should be no free memory
+obj/kern/kernel.asm:	   //       overwrite memory.  Known as a "guard page".
+obj/kern/kernel.asm:	   // We might not have 2^32 - KERNBASE bytes of physical memory, but
+obj/kern/kernel.asm:	   // somewhere between KERNBASE and KERNBASE+4MB right now, which is
+obj/kern/kernel.asm:// If it cannot, 'env' is destroyed and, if env is the current
+obj/kern/kernel.asm:// environment, this function will not return.
+obj/kern/kernel.asm:			 env_destroy(env);	// may not return
+obj/kern/kernel.asm:	   //   'va' and 'len' values that are not page-aligned.
+obj/kern/kernel.asm:	   // to ensure that the envid is not stale
+obj/kern/kernel.asm:	   // (i.e., does not refer to a _previous_ environment
+obj/kern/kernel.asm:	   for (pdeno = 0; pdeno < PDX(UTOP); pdeno++) {
+obj/kern/kernel.asm:			 if (!(e->env_pgdir[pdeno] & PTE_P))
+obj/kern/kernel.asm:			 pa = PTE_ADDR(e->env_pgdir[pdeno]);
+obj/kern/kernel.asm:			 for (pteno = 0; pteno <= PTX(~0); pteno++) {
+obj/kern/kernel.asm:				    if (pt[pteno] & PTE_P)
+obj/kern/kernel.asm:						  page_remove(e->env_pgdir, PGADDR(pdeno, pteno, 0));
+obj/kern/kernel.asm:			 pa = PTE_ADDR(e->env_pgdir[pdeno]);
+obj/kern/kernel.asm:			 for (pteno = 0; pteno <= PTX(~0); pteno++) {
+obj/kern/kernel.asm:				    if (pt[pteno] & PTE_P)
+obj/kern/kernel.asm:						  page_remove(e->env_pgdir, PGADDR(pdeno, pteno, 0));
+obj/kern/kernel.asm:			 pa = PTE_ADDR(e->env_pgdir[pdeno]);
+obj/kern/kernel.asm:			 for (pteno = 0; pteno <= PTX(~0); pteno++) {
+obj/kern/kernel.asm:				    if (pt[pteno] & PTE_P)
+obj/kern/kernel.asm:						  page_remove(e->env_pgdir, PGADDR(pdeno, pteno, 0));
+obj/kern/kernel.asm:			 e->env_pgdir[pdeno] = 0;
+obj/kern/kernel.asm:	   for (pdeno = 0; pdeno < PDX(UTOP); pdeno++) {
+obj/kern/kernel.asm:			 e->env_pgdir[pdeno] = 0;
+obj/kern/kernel.asm:// If e was the current env, then runs a new environment (and does not return
+obj/kern/kernel.asm:// This function does not return.
+obj/kern/kernel.asm:				    "\taddl $0x8,%%esp\n" /* skip tf_trapno and tf_errcode */
+obj/kern/kernel.asm:// This function does not return.
+obj/kern/kernel.asm:	// another CPU has even been given a chance to acquire it.
+obj/kern/kernel.asm:f010377e:	f7 d6                	not    %esi
+obj/kern/kernel.asm:	   cprintf("  trap 0x%08x %s\n", tf->tf_trapno, trapname(tf->tf_trapno));
+obj/kern/kernel.asm:	   if (trapno < ARRAY_SIZE(excnames))
+obj/kern/kernel.asm:			 return excnames[trapno];
+obj/kern/kernel.asm:	   if (trapno == T_SYSCALL)
+obj/kern/kernel.asm:	   if (trapno >= IRQ_OFFSET && trapno < IRQ_OFFSET + 16)
+obj/kern/kernel.asm:	   return "(unknown trap)";
+obj/kern/kernel.asm:	   if (trapno < ARRAY_SIZE(excnames))
+obj/kern/kernel.asm:			 return excnames[trapno];
+obj/kern/kernel.asm:	   if (trapno == T_SYSCALL)
+obj/kern/kernel.asm:	   cprintf("  trap 0x%08x %s\n", tf->tf_trapno, trapname(tf->tf_trapno));
+obj/kern/kernel.asm:	   if (tf == last_tf && tf->tf_trapno == T_PGFLT)
+obj/kern/kernel.asm:	   // PR=a protection violation caused the fault (NP=page not present).
+obj/kern/kernel.asm:	   if (tf->tf_trapno == T_PGFLT)
+obj/kern/kernel.asm:						  tf->tf_err & 1 ? "protection" : "not-present");
+obj/kern/kernel.asm:	   // PR=a protection violation caused the fault (NP=page not present).
+obj/kern/kernel.asm:	   if (tf->tf_trapno == T_PGFLT)
+obj/kern/kernel.asm:						  tf->tf_err & 1 ? "protection" : "not-present");
+obj/kern/kernel.asm:			 cprintf("no page fault upcall. envid: %x\n", curenv->env_id);
+obj/kern/kernel.asm:	// The + in "+m" denotes a read-modify-write operand.
+obj/kern/kernel.asm:			cprintf("0x%08x", tf -> tf_trapno);
+obj/kern/kernel.asm:			panic("Interrupts are not disabled \n");
+obj/kern/kernel.asm:			 // The trapframe on the stack should be ignored from here on.
+obj/kern/kernel.asm:	   if (tf -> tf_trapno == T_PGFLT)
+obj/kern/kernel.asm:	   } else if (tf -> tf_trapno == T_BRKPT)
+obj/kern/kernel.asm:	   } else if (tf -> tf_trapno == T_SYSCALL)
+obj/kern/kernel.asm:	   // The hardware sometimes raises these because of noise on the
+obj/kern/kernel.asm:	   if (tf->tf_trapno == IRQ_OFFSET + IRQ_SPURIOUS) {
+obj/kern/kernel.asm:	   // If we made it to this point, then no other environment was
+obj/kern/kernel.asm:// Halt this CPU when there is nothing to do. Wait until the
+obj/kern/kernel.asm:	   // For debugging and testing purposes, if there are no runnable
+obj/kern/kernel.asm:	   // For debugging and testing purposes, if there are no runnable
+obj/kern/kernel.asm:	   // Mark that no environment is running on this CPU
+obj/kern/kernel.asm:	   // timer interupts come in, we know we should re-acquire the
+obj/kern/kernel.asm:	// The + in "+m" denotes a read-modify-write operand.
+obj/kern/kernel.asm:	// another CPU has even been given a chance to acquire it.
+obj/kern/kernel.asm:syscall(uint32_t syscallno, uint32_t a1, uint32_t a2, uint32_t a3, uint32_t a4, uint32_t a5)
+obj/kern/kernel.asm:	   //	panic("syscall not implemented");
+obj/kern/kernel.asm:	   switch (syscallno) {
+obj/kern/kernel.asm:	   // Destroy the environment if not.
+obj/kern/kernel.asm:// Returns the character, or 0 if there is no input waiting.
+obj/kern/kernel.asm:	   //panic("sys_exofork not implemented");
+obj/kern/kernel.asm:	   //panic("sys_exofork not implemented");
+obj/kern/kernel.asm:	   //panic("sys_env_set_status not implemented");
+obj/kern/kernel.asm:	   //panic("sys_env_set_status not implemented");
+obj/kern/kernel.asm:	   //panic("sys_env_set_pgfault_upcall not implemented");
+obj/kern/kernel.asm:	   //panic("sys_env_set_pgfault_upcall not implemented");
+obj/kern/kernel.asm:	   //panic("sys_page_alloc not implemented");
+obj/kern/kernel.asm:	   //panic("sys_page_alloc not implemented");
+obj/kern/kernel.asm:	   //panic("sys_page_map not implemented");
+obj/kern/kernel.asm:	   //panic("sys_page_map not implemented");
+obj/kern/kernel.asm:	   //panic("sys_page_unmap not implemented");
+obj/kern/kernel.asm:	   //panic("sys_page_unmap not implemented");
+obj/kern/kernel.asm://	-E_INVAL if dstva < UTOP but dstva is not page-aligned.
+obj/kern/kernel.asm:	   panic("sys_ipc_recv not implemented");
+obj/kern/kernel.asm:	   panic("sys_ipc_try_send not implemented");
+obj/kern/kernel.asm:			 if (m < l) {	// no match in [l, m]
+obj/kern/kernel.asm:				    /* do nothing */;
+obj/kern/kernel.asm://	negative if not.  But even if it returns negative it has stored some
+obj/kern/kernel.asm:	   info->eip_file = "<unknown>";
+obj/kern/kernel.asm:	   info->eip_fn_name = "<unknown>";
+obj/kern/kernel.asm:			 // Return -1 if it is not.  Hint: Call user_mem_check.
+obj/kern/kernel.asm:	   // Ignore stuff after the colon.
+obj/kern/kernel.asm:	   // or 0 if there was no containing function.
+obj/kern/kernel.asm:	   // or 0 if there was no containing function.
+obj/kern/kernel.asm:	   // or 0 if there was no containing function.
+obj/kern/kernel.asm:	   // or 0 if there was no containing function.
+obj/kern/kernel.asm:			 // Return -1 if it is not.  Hint: Call user_mem_check.
+obj/kern/kernel.asm:				/* do nothing */;
+obj/kern/kernel.asm:		/* do nothing */;
+obj/kern/kernel.asm:// or a null pointer if the string has no 'c'.
+obj/kern/kernel.asm:// or a null pointer if the string has no 'c'.
+obj/kern/kernel.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/kern/kernel.asm:f0105563:	90                   	nop
+obj/kern/kernel.asm:	# Set up initial page table. We cannot use kern_pgdir yet because
+obj/kern/kernel.asm:	nop
+obj/kern/kernel.asm:f01055de:	90                   	nop
+obj/kern/kernel.asm:	// starting at byte 0x0E of the BDA.  0 if not present.
+obj/kern/kernel.asm:		cprintf("SMP: Default configurations not implemented\n");
+obj/kern/kernel.asm:			cprintf("mpinit: unknown config type %x\n", *p);
+obj/kern/kernel.asm:		// Didn't like what we found; fall back to no MP.
+obj/kern/kernel.asm:		cprintf("SMP: configuration not found, SMP disabled\n");
+obj/kern/kernel.asm:	// we do not need to program the IOAPIC.
+obj/kern/kernel.asm:	// Enable interrupts on the APIC (but not on the processor).
+obj/kern/kernel.asm:// Acknowledge interrupt.
+obj/kern/kernel.asm:// Acknowledge interrupt.
+obj/kern/kernel.asm:	// should be ignored, but it is part of the official Intel algorithm.
+obj/kern/kernel.asm:	// should be ignored, but it is part of the official Intel algorithm.
+obj/kern/kernel.asm:	// should be ignored, but it is part of the official Intel algorithm.
+obj/kern/kernel.asm:	// The + in "+m" denotes a read-modify-write operand.
+obj/kern/kernel.asm:		panic("CPU %d cannot acquire %s: already holding", cpunum(), lk->name);
+obj/kern/kernel.asm:	// It also serializes, so that reads after acquire are not
+obj/kern/kernel.asm:	// It also serializes, so that reads after acquire are not
+obj/kern/kernel.asm:		cprintf("CPU %d cannot release %s: held by CPU %d\nAcquired at:", 
+obj/kern/kernel.asm:		cprintf("CPU %d cannot release %s: held by CPU %d\nAcquired at:", 
+obj/kern/kernel.asm:		cprintf("CPU %d cannot release %s: held by CPU %d\nAcquired at:", 
+obj/kern/kernel.asm:		cprintf("CPU %d cannot release %s: held by CPU %d\nAcquired at:", 
+obj/kern/kernel.asm:	// The + in "+m" denotes a read-modify-write operand.
+obj/kern/kernel.asm:	// x86 CPUs will not reorder loads/stores across locked instructions
+obj/kern/kernel.asm:	// gcc will not reorder C statements across the xchg.
+obj/kern/kernel.asm:f0105d7f:	90                   	nop
+obj/kern/kernel.asm:f0105dd8:	90                   	nop
+obj/kern/kernel.asm:f0105e68:	90                   	nop
+obj/kern/kernel.asm:f0105f4f:	90                   	nop
+Binary file obj/kern/mpconfig.o matches
+obj/.vars.KERN_CFLAGS:   -O1 -fno-builtin -I. -MD -fno-omit-frame-pointer -std=gnu99 -static -fno-pie -Wall -Wno-format -Wno-unused -Werror -gstabs -m32 -fno-tree-ch -fno-stack-protector -DJOS_KERNEL -gstabs
+obj/.deps:obj/user/faultnostack.o: user/faultnostack.c inc/lib.h inc/types.h \
+Binary file obj/user/sendpage.o matches
+Binary file obj/user/divzero.o matches
+Binary file obj/user/faultnostack.o matches
+Binary file obj/user/yield.o matches
+obj/user/sendpage.asm:	// If not, push dummy argc/argv arguments.
+obj/user/sendpage.asm:	// because the kernel does not know about passing arguments.
+obj/user/sendpage.asm:const char *binaryname = "<unknown>";
+obj/user/sendpage.asm:				/* do nothing */;
+obj/user/sendpage.asm:		/* do nothing */;
+obj/user/sendpage.asm:// or a null pointer if the string has no 'c'.
+obj/user/sendpage.asm:// or a null pointer if the string has no 'c'.
+obj/user/sendpage.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/sendpage.asm:	   //panic("pgfault not implemented");
+obj/user/sendpage.asm:	   //panic("fork not implemented");
+obj/user/sendpage.asm:	   panic("sfork not implemented");
+obj/user/sendpage.asm://   as meaning "no page".  (Zero is not the right value, since that's
+obj/user/sendpage.asm:	panic("ipc_recv not implemented");
+obj/user/sendpage.asm://   as meaning "no page".  (Zero is not the right value.)
+obj/user/sendpage.asm:	panic("ipc_send not implemented");
+obj/user/sendpage.asm:// Returns 0 if no such environment exists.
+obj/user/sendpage.asm:// Returns 0 if no such environment exists.
+obj/user/sendpage.asm:mov %eax, (%ebx) // now eip is in the trap-time stack
+obj/user/sendpage.asm:	   // can no longer modify any general-purpose registers.
+obj/user/sendpage.asm:	   // no longer use arithmetic operations or anything else that
+obj/user/sendpage.asm:  80118f:	90                   	nop
+obj/user/sendpage.asm:  8011e8:	90                   	nop
+obj/user/sendpage.asm:  801278:	90                   	nop
+obj/user/sendpage.asm:  80135f:	90                   	nop
+Binary file obj/user/breakpoint matches
+Binary file obj/user/stresssched.o matches
+Binary file obj/user/fairness matches
+Binary file obj/user/divzero matches
+Binary file obj/user/faultalloc matches
+obj/user/faultread.asm:	// If not, push dummy argc/argv arguments.
+obj/user/faultread.asm:	// because the kernel does not know about passing arguments.
+obj/user/faultread.asm:const char *binaryname = "<unknown>";
+obj/user/faultread.asm:				/* do nothing */;
+obj/user/faultread.asm:		/* do nothing */;
+obj/user/faultread.asm:// or a null pointer if the string has no 'c'.
+obj/user/faultread.asm:// or a null pointer if the string has no 'c'.
+obj/user/faultread.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/faultread.asm:  800d18:	90                   	nop
+obj/user/faultread.asm:  800da8:	90                   	nop
+obj/user/faultread.asm:  800e8f:	90                   	nop
+Binary file obj/user/testbss matches
+Binary file obj/user/faultwritekernel matches
+obj/user/faultregs.asm:	// If not, push dummy argc/argv arguments.
+obj/user/faultregs.asm:	// because the kernel does not know about passing arguments.
+obj/user/faultregs.asm:const char *binaryname = "<unknown>";
+obj/user/faultregs.asm:				/* do nothing */;
+obj/user/faultregs.asm:		/* do nothing */;
+obj/user/faultregs.asm:// or a null pointer if the string has no 'c'.
+obj/user/faultregs.asm:// or a null pointer if the string has no 'c'.
+obj/user/faultregs.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/faultregs.asm:mov %eax, (%ebx) // now eip is in the trap-time stack
+obj/user/faultregs.asm:	   // can no longer modify any general-purpose registers.
+obj/user/faultregs.asm:	   // no longer use arithmetic operations or anything else that
+obj/user/faultregs.asm:  8012d8:	90                   	nop
+obj/user/faultregs.asm:  801368:	90                   	nop
+obj/user/faultregs.asm:  80144f:	90                   	nop
+Binary file obj/user/buggyhello matches
+Binary file obj/user/pingpong matches
+obj/user/badsegment.asm:	// If not, push dummy argc/argv arguments.
+obj/user/badsegment.asm:	// because the kernel does not know about passing arguments.
+obj/user/badsegment.asm:const char *binaryname = "<unknown>";
+obj/user/badsegment.asm:				/* do nothing */;
+obj/user/badsegment.asm:		/* do nothing */;
+obj/user/badsegment.asm:// or a null pointer if the string has no 'c'.
+obj/user/badsegment.asm:// or a null pointer if the string has no 'c'.
+obj/user/badsegment.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/badsegment.asm:  800d08:	90                   	nop
+obj/user/badsegment.asm:  800d98:	90                   	nop
+obj/user/badsegment.asm:  800e7f:	90                   	nop
+Binary file obj/user/faultdie matches
+obj/user/breakpoint.asm:	// If not, push dummy argc/argv arguments.
+obj/user/breakpoint.asm:	// because the kernel does not know about passing arguments.
+obj/user/breakpoint.asm:const char *binaryname = "<unknown>";
+obj/user/breakpoint.asm:				/* do nothing */;
+obj/user/breakpoint.asm:		/* do nothing */;
+obj/user/breakpoint.asm:// or a null pointer if the string has no 'c'.
+obj/user/breakpoint.asm:// or a null pointer if the string has no 'c'.
+obj/user/breakpoint.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/breakpoint.asm:  800caf:	90                   	nop
+obj/user/breakpoint.asm:  800d08:	90                   	nop
+obj/user/breakpoint.asm:  800d98:	90                   	nop
+obj/user/breakpoint.asm:  800e7f:	90                   	nop
+obj/user/buggyhello.asm:	// If not, push dummy argc/argv arguments.
+obj/user/buggyhello.asm:	// because the kernel does not know about passing arguments.
+obj/user/buggyhello.asm:const char *binaryname = "<unknown>";
+obj/user/buggyhello.asm:				/* do nothing */;
+obj/user/buggyhello.asm:		/* do nothing */;
+obj/user/buggyhello.asm:// or a null pointer if the string has no 'c'.
+obj/user/buggyhello.asm:// or a null pointer if the string has no 'c'.
+obj/user/buggyhello.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/buggyhello.asm:  800caf:	90                   	nop
+obj/user/buggyhello.asm:  800d08:	90                   	nop
+obj/user/buggyhello.asm:  800d98:	90                   	nop
+obj/user/buggyhello.asm:  800e7f:	90                   	nop
+obj/user/spin.asm:	// If not, push dummy argc/argv arguments.
+obj/user/spin.asm:	// because the kernel does not know about passing arguments.
+obj/user/spin.asm:			/* do nothing */;
+obj/user/spin.asm:const char *binaryname = "<unknown>";
+obj/user/spin.asm:				/* do nothing */;
+obj/user/spin.asm:		/* do nothing */;
+obj/user/spin.asm:// or a null pointer if the string has no 'c'.
+obj/user/spin.asm:// or a null pointer if the string has no 'c'.
+obj/user/spin.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/spin.asm:	   //panic("pgfault not implemented");
+obj/user/spin.asm:	   //panic("fork not implemented");
+obj/user/spin.asm:	   panic("sfork not implemented");
+obj/user/spin.asm:mov %eax, (%ebx) // now eip is in the trap-time stack
+obj/user/spin.asm:	   // can no longer modify any general-purpose registers.
+obj/user/spin.asm:	   // no longer use arithmetic operations or anything else that
+obj/user/spin.asm:  8010a8:	90                   	nop
+obj/user/spin.asm:  801138:	90                   	nop
+obj/user/spin.asm:  80121f:	90                   	nop
+Binary file obj/user/spin matches
+obj/user/idle.asm:	// If not, push dummy argc/argv arguments.
+obj/user/idle.asm:	// because the kernel does not know about passing arguments.
+obj/user/idle.asm:const char *binaryname = "<unknown>";
+obj/user/idle.asm:				/* do nothing */;
+obj/user/idle.asm:		/* do nothing */;
+obj/user/idle.asm:// or a null pointer if the string has no 'c'.
+obj/user/idle.asm:// or a null pointer if the string has no 'c'.
+obj/user/idle.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/idle.asm:  800d18:	90                   	nop
+obj/user/idle.asm:  800da8:	90                   	nop
+obj/user/idle.asm:  800e8f:	90                   	nop
+obj/user/testbss.asm:	// If not, push dummy argc/argv arguments.
+obj/user/testbss.asm:	// because the kernel does not know about passing arguments.
+obj/user/testbss.asm:const char *binaryname = "<unknown>";
+obj/user/testbss.asm:				/* do nothing */;
+obj/user/testbss.asm:		/* do nothing */;
+obj/user/testbss.asm:// or a null pointer if the string has no 'c'.
+obj/user/testbss.asm:// or a null pointer if the string has no 'c'.
+obj/user/testbss.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/testbss.asm:  800da8:	90                   	nop
+obj/user/testbss.asm:  800e38:	90                   	nop
+obj/user/testbss.asm:  800f1f:	90                   	nop
+Binary file obj/user/dumbfork matches
+obj/user/faultallocbad.asm:	// If not, push dummy argc/argv arguments.
+obj/user/faultallocbad.asm:	// because the kernel does not know about passing arguments.
+obj/user/faultallocbad.asm:const char *binaryname = "<unknown>";
+obj/user/faultallocbad.asm:				/* do nothing */;
+obj/user/faultallocbad.asm:		/* do nothing */;
+obj/user/faultallocbad.asm:// or a null pointer if the string has no 'c'.
+obj/user/faultallocbad.asm:// or a null pointer if the string has no 'c'.
+obj/user/faultallocbad.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/faultallocbad.asm:mov %eax, (%ebx) // now eip is in the trap-time stack
+obj/user/faultallocbad.asm:	   // can no longer modify any general-purpose registers.
+obj/user/faultallocbad.asm:	   // no longer use arithmetic operations or anything else that
+obj/user/faultallocbad.asm:  800df8:	90                   	nop
+obj/user/faultallocbad.asm:  800e88:	90                   	nop
+obj/user/faultallocbad.asm:  800f6f:	90                   	nop
+obj/user/pingpong.asm:	// If not, push dummy argc/argv arguments.
+obj/user/pingpong.asm:	// because the kernel does not know about passing arguments.
+obj/user/pingpong.asm:const char *binaryname = "<unknown>";
+obj/user/pingpong.asm:				/* do nothing */;
+obj/user/pingpong.asm:		/* do nothing */;
+obj/user/pingpong.asm:// or a null pointer if the string has no 'c'.
+obj/user/pingpong.asm:// or a null pointer if the string has no 'c'.
+obj/user/pingpong.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/pingpong.asm:	   //panic("pgfault not implemented");
+obj/user/pingpong.asm:	   //panic("fork not implemented");
+obj/user/pingpong.asm:	   panic("sfork not implemented");
+obj/user/pingpong.asm://   as meaning "no page".  (Zero is not the right value, since that's
+obj/user/pingpong.asm:	panic("ipc_recv not implemented");
+obj/user/pingpong.asm://   as meaning "no page".  (Zero is not the right value.)
+obj/user/pingpong.asm:	panic("ipc_send not implemented");
+obj/user/pingpong.asm:// Returns 0 if no such environment exists.
+obj/user/pingpong.asm:// Returns 0 if no such environment exists.
+obj/user/pingpong.asm:mov %eax, (%ebx) // now eip is in the trap-time stack
+obj/user/pingpong.asm:	   // can no longer modify any general-purpose registers.
+obj/user/pingpong.asm:	   // no longer use arithmetic operations or anything else that
+obj/user/pingpong.asm:  801118:	90                   	nop
+obj/user/pingpong.asm:  8011a8:	90                   	nop
+obj/user/pingpong.asm:  80128f:	90                   	nop
+Binary file obj/user/faultallocbad matches
+obj/user/dumbfork.asm:	// If not, push dummy argc/argv arguments.
+obj/user/dumbfork.asm:	// because the kernel does not know about passing arguments.
+obj/user/dumbfork.asm:		// is no longer valid (it refers to the parent!).
+obj/user/dumbfork.asm:const char *binaryname = "<unknown>";
+obj/user/dumbfork.asm:				/* do nothing */;
+obj/user/dumbfork.asm:		/* do nothing */;
+obj/user/dumbfork.asm:// or a null pointer if the string has no 'c'.
+obj/user/dumbfork.asm:// or a null pointer if the string has no 'c'.
+obj/user/dumbfork.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/dumbfork.asm:  800e4f:	90                   	nop
+obj/user/dumbfork.asm:  800ea8:	90                   	nop
+obj/user/dumbfork.asm:  800f38:	90                   	nop
+obj/user/dumbfork.asm:  80101f:	90                   	nop
+Binary file obj/user/faultdie.o matches
+Binary file obj/user/evilhello matches
+Binary file obj/user/faultalloc.o matches
+obj/user/pingpongs.asm:	// If not, push dummy argc/argv arguments.
+obj/user/pingpongs.asm:	// because the kernel does not know about passing arguments.
+obj/user/pingpongs.asm:const char *binaryname = "<unknown>";
+obj/user/pingpongs.asm:				/* do nothing */;
+obj/user/pingpongs.asm:		/* do nothing */;
+obj/user/pingpongs.asm:// or a null pointer if the string has no 'c'.
+obj/user/pingpongs.asm:// or a null pointer if the string has no 'c'.
+obj/user/pingpongs.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/pingpongs.asm:	   //panic("pgfault not implemented");
+obj/user/pingpongs.asm:	   //panic("fork not implemented");
+obj/user/pingpongs.asm:	   panic("sfork not implemented");
+obj/user/pingpongs.asm://   as meaning "no page".  (Zero is not the right value, since that's
+obj/user/pingpongs.asm:	panic("ipc_recv not implemented");
+obj/user/pingpongs.asm://   as meaning "no page".  (Zero is not the right value.)
+obj/user/pingpongs.asm:	panic("ipc_send not implemented");
+obj/user/pingpongs.asm:// Returns 0 if no such environment exists.
+obj/user/pingpongs.asm:// Returns 0 if no such environment exists.
+obj/user/pingpongs.asm:mov %eax, (%ebx) // now eip is in the trap-time stack
+obj/user/pingpongs.asm:	   // can no longer modify any general-purpose registers.
+obj/user/pingpongs.asm:	   // no longer use arithmetic operations or anything else that
+obj/user/pingpongs.asm:  801158:	90                   	nop
+obj/user/pingpongs.asm:  8011e8:	90                   	nop
+obj/user/pingpongs.asm:  8012cf:	90                   	nop
+Binary file obj/user/buggyhello.o matches
+Binary file obj/user/faultbadhandler matches
+Binary file obj/user/evilhello.o matches
+Binary file obj/user/stresssched matches
+obj/user/faultnostack.asm:obj/user/faultnostack:     file format elf32-i386
+obj/user/faultnostack.asm:	// If not, push dummy argc/argv arguments.
+obj/user/faultnostack.asm:	// because the kernel does not know about passing arguments.
+obj/user/faultnostack.asm:const char *binaryname = "<unknown>";
+obj/user/faultnostack.asm:mov %eax, (%ebx) // now eip is in the trap-time stack
+obj/user/faultnostack.asm:	   // can no longer modify any general-purpose registers.
+obj/user/faultnostack.asm:	   // no longer use arithmetic operations or anything else that
+obj/user/faultnostack.asm:				/* do nothing */;
+obj/user/faultnostack.asm:		/* do nothing */;
+obj/user/faultnostack.asm:// or a null pointer if the string has no 'c'.
+obj/user/faultnostack.asm:// or a null pointer if the string has no 'c'.
+obj/user/faultnostack.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/faultnostack.asm:  800d3f:	90                   	nop
+obj/user/faultnostack.asm:  800d98:	90                   	nop
+obj/user/faultnostack.asm:  800e28:	90                   	nop
+obj/user/faultnostack.asm:  800f0f:	90                   	nop
+Binary file obj/user/idle matches
+Binary file obj/user/faultread.o matches
+Binary file obj/user/faultreadkernel matches
+obj/user/primes.asm:	// If not, push dummy argc/argv arguments.
+obj/user/primes.asm:	// because the kernel does not know about passing arguments.
+obj/user/primes.asm:const char *binaryname = "<unknown>";
+obj/user/primes.asm:				/* do nothing */;
+obj/user/primes.asm:		/* do nothing */;
+obj/user/primes.asm:// or a null pointer if the string has no 'c'.
+obj/user/primes.asm:// or a null pointer if the string has no 'c'.
+obj/user/primes.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/primes.asm:	   //panic("pgfault not implemented");
+obj/user/primes.asm:	   //panic("fork not implemented");
+obj/user/primes.asm:	   panic("sfork not implemented");
+obj/user/primes.asm://   as meaning "no page".  (Zero is not the right value, since that's
+obj/user/primes.asm:	panic("ipc_recv not implemented");
+obj/user/primes.asm://   as meaning "no page".  (Zero is not the right value.)
+obj/user/primes.asm:	panic("ipc_send not implemented");
+obj/user/primes.asm:// Returns 0 if no such environment exists.
+obj/user/primes.asm:// Returns 0 if no such environment exists.
+obj/user/primes.asm:mov %eax, (%ebx) // now eip is in the trap-time stack
+obj/user/primes.asm:	   // can no longer modify any general-purpose registers.
+obj/user/primes.asm:	   // no longer use arithmetic operations or anything else that
+obj/user/primes.asm:  801148:	90                   	nop
+obj/user/primes.asm:  8011d8:	90                   	nop
+obj/user/primes.asm:  8012bf:	90                   	nop
+obj/user/faultdie.asm:	// If not, push dummy argc/argv arguments.
+obj/user/faultdie.asm:	// because the kernel does not know about passing arguments.
+obj/user/faultdie.asm:const char *binaryname = "<unknown>";
+obj/user/faultdie.asm:				/* do nothing */;
+obj/user/faultdie.asm:		/* do nothing */;
+obj/user/faultdie.asm:// or a null pointer if the string has no 'c'.
+obj/user/faultdie.asm:// or a null pointer if the string has no 'c'.
+obj/user/faultdie.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/faultdie.asm:mov %eax, (%ebx) // now eip is in the trap-time stack
+obj/user/faultdie.asm:	   // can no longer modify any general-purpose registers.
+obj/user/faultdie.asm:	   // no longer use arithmetic operations or anything else that
+obj/user/faultdie.asm:  800d6f:	90                   	nop
+obj/user/faultdie.asm:  800dc8:	90                   	nop
+obj/user/faultdie.asm:  800e58:	90                   	nop
+obj/user/faultdie.asm:  800f3f:	90                   	nop
+obj/user/faultwrite.asm:	// If not, push dummy argc/argv arguments.
+obj/user/faultwrite.asm:	// because the kernel does not know about passing arguments.
+obj/user/faultwrite.asm:const char *binaryname = "<unknown>";
+obj/user/faultwrite.asm:				/* do nothing */;
+obj/user/faultwrite.asm:		/* do nothing */;
+obj/user/faultwrite.asm:// or a null pointer if the string has no 'c'.
+obj/user/faultwrite.asm:// or a null pointer if the string has no 'c'.
+obj/user/faultwrite.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/faultwrite.asm:  800d08:	90                   	nop
+obj/user/faultwrite.asm:  800d98:	90                   	nop
+obj/user/faultwrite.asm:  800e7f:	90                   	nop
+Binary file obj/user/faultread matches
+obj/user/divzero.asm:	// If not, push dummy argc/argv arguments.
+obj/user/divzero.asm:	// because the kernel does not know about passing arguments.
+obj/user/divzero.asm:const char *binaryname = "<unknown>";
+obj/user/divzero.asm:				/* do nothing */;
+obj/user/divzero.asm:		/* do nothing */;
+obj/user/divzero.asm:// or a null pointer if the string has no 'c'.
+obj/user/divzero.asm:// or a null pointer if the string has no 'c'.
+obj/user/divzero.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/divzero.asm:  800d28:	90                   	nop
+obj/user/divzero.asm:  800db8:	90                   	nop
+obj/user/divzero.asm:  800e9f:	90                   	nop
+Binary file obj/user/badsegment.o matches
+obj/user/softint.asm:	// If not, push dummy argc/argv arguments.
+obj/user/softint.asm:	// because the kernel does not know about passing arguments.
+obj/user/softint.asm:const char *binaryname = "<unknown>";
+obj/user/softint.asm:				/* do nothing */;
+obj/user/softint.asm:		/* do nothing */;
+obj/user/softint.asm:// or a null pointer if the string has no 'c'.
+obj/user/softint.asm:// or a null pointer if the string has no 'c'.
+obj/user/softint.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/softint.asm:  800d08:	90                   	nop
+obj/user/softint.asm:  800d98:	90                   	nop
+obj/user/softint.asm:  800e7f:	90                   	nop
+obj/user/faultwritekernel.asm:	// If not, push dummy argc/argv arguments.
+obj/user/faultwritekernel.asm:	// because the kernel does not know about passing arguments.
+obj/user/faultwritekernel.asm:const char *binaryname = "<unknown>";
+obj/user/faultwritekernel.asm:				/* do nothing */;
+obj/user/faultwritekernel.asm:		/* do nothing */;
+obj/user/faultwritekernel.asm:// or a null pointer if the string has no 'c'.
+obj/user/faultwritekernel.asm:// or a null pointer if the string has no 'c'.
+obj/user/faultwritekernel.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/faultwritekernel.asm:  800d08:	90                   	nop
+obj/user/faultwritekernel.asm:  800d98:	90                   	nop
+obj/user/faultwritekernel.asm:  800e7f:	90                   	nop
+Binary file obj/user/pingpong.o matches
+Binary file obj/user/forktree matches
+obj/user/fairness.asm:	// If not, push dummy argc/argv arguments.
+obj/user/fairness.asm:	// because the kernel does not know about passing arguments.
+obj/user/fairness.asm:const char *binaryname = "<unknown>";
+obj/user/fairness.asm:				/* do nothing */;
+obj/user/fairness.asm:		/* do nothing */;
+obj/user/fairness.asm:// or a null pointer if the string has no 'c'.
+obj/user/fairness.asm:// or a null pointer if the string has no 'c'.
+obj/user/fairness.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/fairness.asm://   as meaning "no page".  (Zero is not the right value, since that's
+obj/user/fairness.asm:	panic("ipc_recv not implemented");
+obj/user/fairness.asm://   as meaning "no page".  (Zero is not the right value.)
+obj/user/fairness.asm:	panic("ipc_send not implemented");
+obj/user/fairness.asm:// Returns 0 if no such environment exists.
+obj/user/fairness.asm:// Returns 0 if no such environment exists.
+obj/user/fairness.asm:  800dc8:	90                   	nop
+obj/user/fairness.asm:  800e58:	90                   	nop
+obj/user/fairness.asm:  800f3f:	90                   	nop
+Binary file obj/user/pingpongs.o matches
+Binary file obj/user/faultevilhandler matches
+obj/user/faultevilhandler.asm:	// If not, push dummy argc/argv arguments.
+obj/user/faultevilhandler.asm:	// because the kernel does not know about passing arguments.
+obj/user/faultevilhandler.asm:const char *binaryname = "<unknown>";
+obj/user/faultevilhandler.asm:				/* do nothing */;
+obj/user/faultevilhandler.asm:		/* do nothing */;
+obj/user/faultevilhandler.asm:// or a null pointer if the string has no 'c'.
+obj/user/faultevilhandler.asm:// or a null pointer if the string has no 'c'.
+obj/user/faultevilhandler.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/faultevilhandler.asm:  800ccf:	90                   	nop
+obj/user/faultevilhandler.asm:  800d28:	90                   	nop
+obj/user/faultevilhandler.asm:  800db8:	90                   	nop
+obj/user/faultevilhandler.asm:  800e9f:	90                   	nop
+Binary file obj/user/breakpoint.o matches
+Binary file obj/user/buggyhello2.o matches
+Binary file obj/user/idle.o matches
+Binary file obj/user/sendpage matches
+obj/user/hello.asm:	// If not, push dummy argc/argv arguments.
+obj/user/hello.asm:	// because the kernel does not know about passing arguments.
+obj/user/hello.asm:const char *binaryname = "<unknown>";
+obj/user/hello.asm:				/* do nothing */;
+obj/user/hello.asm:		/* do nothing */;
+obj/user/hello.asm:// or a null pointer if the string has no 'c'.
+obj/user/hello.asm:// or a null pointer if the string has no 'c'.
+obj/user/hello.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/hello.asm:  800d28:	90                   	nop
+obj/user/hello.asm:  800db8:	90                   	nop
+obj/user/hello.asm:  800e9f:	90                   	nop
+obj/user/forktree.asm:	// If not, push dummy argc/argv arguments.
+obj/user/forktree.asm:	// because the kernel does not know about passing arguments.
+obj/user/forktree.asm:const char *binaryname = "<unknown>";
+obj/user/forktree.asm:				/* do nothing */;
+obj/user/forktree.asm:		/* do nothing */;
+obj/user/forktree.asm:// or a null pointer if the string has no 'c'.
+obj/user/forktree.asm:// or a null pointer if the string has no 'c'.
+obj/user/forktree.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/forktree.asm:	   //panic("pgfault not implemented");
+obj/user/forktree.asm:	   //panic("fork not implemented");
+obj/user/forktree.asm:	   panic("sfork not implemented");
+obj/user/forktree.asm:mov %eax, (%ebx) // now eip is in the trap-time stack
+obj/user/forktree.asm:	   // can no longer modify any general-purpose registers.
+obj/user/forktree.asm:	   // no longer use arithmetic operations or anything else that
+obj/user/forktree.asm:  8010c8:	90                   	nop
+obj/user/forktree.asm:  801158:	90                   	nop
+obj/user/forktree.asm:  80123f:	90                   	nop
+Binary file obj/user/dumbfork.o matches
+Binary file obj/user/faultwrite matches
+obj/user/stresssched.asm:	// If not, push dummy argc/argv arguments.
+obj/user/stresssched.asm:	// because the kernel does not know about passing arguments.
+obj/user/stresssched.asm:const char *binaryname = "<unknown>";
+obj/user/stresssched.asm:				/* do nothing */;
+obj/user/stresssched.asm:		/* do nothing */;
+obj/user/stresssched.asm:// or a null pointer if the string has no 'c'.
+obj/user/stresssched.asm:// or a null pointer if the string has no 'c'.
+obj/user/stresssched.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/stresssched.asm:	   //panic("pgfault not implemented");
+obj/user/stresssched.asm:	   //panic("fork not implemented");
+obj/user/stresssched.asm:	   panic("sfork not implemented");
+obj/user/stresssched.asm:mov %eax, (%ebx) // now eip is in the trap-time stack
+obj/user/stresssched.asm:	   // can no longer modify any general-purpose registers.
+obj/user/stresssched.asm:	   // no longer use arithmetic operations or anything else that
+obj/user/stresssched.asm:  8010d8:	90                   	nop
+obj/user/stresssched.asm:  801168:	90                   	nop
+obj/user/stresssched.asm:  80124f:	90                   	nop
+obj/user/evilhello.asm:	// If not, push dummy argc/argv arguments.
+obj/user/evilhello.asm:	// because the kernel does not know about passing arguments.
+obj/user/evilhello.asm:const char *binaryname = "<unknown>";
+obj/user/evilhello.asm:				/* do nothing */;
+obj/user/evilhello.asm:		/* do nothing */;
+obj/user/evilhello.asm:// or a null pointer if the string has no 'c'.
+obj/user/evilhello.asm:// or a null pointer if the string has no 'c'.
+obj/user/evilhello.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/evilhello.asm:  800d18:	90                   	nop
+obj/user/evilhello.asm:  800da8:	90                   	nop
+obj/user/evilhello.asm:  800e8f:	90                   	nop
+Binary file obj/user/fairness.o matches
+Binary file obj/user/faultregs.o matches
+Binary file obj/user/faultevilhandler.o matches
+Binary file obj/user/faultnostack matches
+Binary file obj/user/hello.o matches
+Binary file obj/user/primes.o matches
+obj/user/faultalloc.asm:	// If not, push dummy argc/argv arguments.
+obj/user/faultalloc.asm:	// because the kernel does not know about passing arguments.
+obj/user/faultalloc.asm:const char *binaryname = "<unknown>";
+obj/user/faultalloc.asm:				/* do nothing */;
+obj/user/faultalloc.asm:		/* do nothing */;
+obj/user/faultalloc.asm:// or a null pointer if the string has no 'c'.
+obj/user/faultalloc.asm:// or a null pointer if the string has no 'c'.
+obj/user/faultalloc.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/faultalloc.asm:mov %eax, (%ebx) // now eip is in the trap-time stack
+obj/user/faultalloc.asm:	   // can no longer modify any general-purpose registers.
+obj/user/faultalloc.asm:	   // no longer use arithmetic operations or anything else that
+obj/user/faultalloc.asm:  800daf:	90                   	nop
+obj/user/faultalloc.asm:  800e08:	90                   	nop
+obj/user/faultalloc.asm:  800e98:	90                   	nop
+obj/user/faultalloc.asm:  800f7f:	90                   	nop
+obj/user/faultbadhandler.asm:	// If not, push dummy argc/argv arguments.
+obj/user/faultbadhandler.asm:	// because the kernel does not know about passing arguments.
+obj/user/faultbadhandler.asm:const char *binaryname = "<unknown>";
+obj/user/faultbadhandler.asm:				/* do nothing */;
+obj/user/faultbadhandler.asm:		/* do nothing */;
+obj/user/faultbadhandler.asm:// or a null pointer if the string has no 'c'.
+obj/user/faultbadhandler.asm:// or a null pointer if the string has no 'c'.
+obj/user/faultbadhandler.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/faultbadhandler.asm:  800ccf:	90                   	nop
+obj/user/faultbadhandler.asm:  800d28:	90                   	nop
+obj/user/faultbadhandler.asm:  800db8:	90                   	nop
+obj/user/faultbadhandler.asm:  800e9f:	90                   	nop
+obj/user/faultreadkernel.asm:	// If not, push dummy argc/argv arguments.
+obj/user/faultreadkernel.asm:	// because the kernel does not know about passing arguments.
+obj/user/faultreadkernel.asm:const char *binaryname = "<unknown>";
+obj/user/faultreadkernel.asm:				/* do nothing */;
+obj/user/faultreadkernel.asm:		/* do nothing */;
+obj/user/faultreadkernel.asm:// or a null pointer if the string has no 'c'.
+obj/user/faultreadkernel.asm:// or a null pointer if the string has no 'c'.
+obj/user/faultreadkernel.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/faultreadkernel.asm:  800d18:	90                   	nop
+obj/user/faultreadkernel.asm:  800da8:	90                   	nop
+obj/user/faultreadkernel.asm:  800e8f:	90                   	nop
+Binary file obj/user/faultbadhandler.o matches
+Binary file obj/user/hello matches
+obj/user/yield.asm:	// If not, push dummy argc/argv arguments.
+obj/user/yield.asm:	// because the kernel does not know about passing arguments.
+obj/user/yield.asm:const char *binaryname = "<unknown>";
+obj/user/yield.asm:				/* do nothing */;
+obj/user/yield.asm:		/* do nothing */;
+obj/user/yield.asm:// or a null pointer if the string has no 'c'.
+obj/user/yield.asm:// or a null pointer if the string has no 'c'.
+obj/user/yield.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/yield.asm:  800d68:	90                   	nop
+obj/user/yield.asm:  800df8:	90                   	nop
+obj/user/yield.asm:  800edf:	90                   	nop
+Binary file obj/user/buggyhello2 matches
+Binary file obj/user/faultallocbad.o matches
+Binary file obj/user/softint.o matches
+Binary file obj/user/spin.o matches
+Binary file obj/user/testbss.o matches
+Binary file obj/user/forktree.o matches
+Binary file obj/user/faultwritekernel.o matches
+obj/user/buggyhello2.asm:	// If not, push dummy argc/argv arguments.
+obj/user/buggyhello2.asm:	// because the kernel does not know about passing arguments.
+obj/user/buggyhello2.asm:const char *binaryname = "<unknown>";
+obj/user/buggyhello2.asm:				/* do nothing */;
+obj/user/buggyhello2.asm:		/* do nothing */;
+obj/user/buggyhello2.asm:// or a null pointer if the string has no 'c'.
+obj/user/buggyhello2.asm:// or a null pointer if the string has no 'c'.
+obj/user/buggyhello2.asm:// or a pointer to the string-ending null character if the string has no 'c'.
+obj/user/buggyhello2.asm:  800d18:	90                   	nop
+obj/user/buggyhello2.asm:  800da8:	90                   	nop
+obj/user/buggyhello2.asm:  800e8f:	90                   	nop
+Binary file obj/user/pingpongs matches
+Binary file obj/user/faultregs matches
+Binary file obj/user/primes matches
+Binary file obj/user/softint matches
+Binary file obj/user/yield matches
+Binary file obj/user/faultwrite.o matches
+Binary file obj/user/faultreadkernel.o matches
+Binary file obj/user/badsegment matches
+mergedep.pl:# which may or may not previously exist.
+mergedep.pl:# including dependencies having no target,
+mergedep.pl:			# ignore blank lines and comments
+GNUmakefile:# -fno-builtin is required to avoid refs to undefined functions in the kernel.
+GNUmakefile:CFLAGS := $(CFLAGS) $(DEFS) $(LABDEFS) -O1 -fno-builtin -I$(TOP) -MD
+GNUmakefile:CFLAGS += -fno-omit-frame-pointer
+GNUmakefile:CFLAGS += -fno-pie
+GNUmakefile:CFLAGS += -Wall -Wno-format -Wno-unused -Werror -gstabs -m32
+GNUmakefile:# -fno-tree-ch prevented gcc from sometimes reordering read_ebp() before
+GNUmakefile:CFLAGS += -fno-tree-ch
+GNUmakefile:# Add -fno-stack-protector if the option exists.
+GNUmakefile:CFLAGS += $(shell $(CC) -fno-stack-protector -E -x c /dev/null >/dev/null 2>&1 && echo -fno-stack-protector)
+GNUmakefile:# make it so that no intermediate .o files are ever deleted
+GNUmakefile:QEMUOPTS += $(shell if $(QEMU) -nographic -help | grep -q '^-D '; then echo '-D qemu.log'; fi)
+GNUmakefile:qemu-nox: $(IMAGES) pre-qemu
+GNUmakefile:	$(QEMU) -nographic $(QEMUOPTS)
+GNUmakefile:qemu-nox-gdb: $(IMAGES) pre-qemu
+GNUmakefile:	$(QEMU) -nographic $(QEMUOPTS) -S
+GNUmakefile:	  (echo "'make clean' failed.  HINT: Do you have another running instance of JOS?" && exit 1)
+GNUmakefile:		echo "Hand-in repository is not configured."; \
+GNUmakefile:		read -p "You are not on the lab$(LAB) branch.  Hand-in the current branch? [y/N] " r; \
+GNUmakefile:		read -p "Untracked files will not be handed in.  Continue? [y/N] " r; \
+GNUmakefile:run-%-nox-gdb: prep-% pre-qemu
+GNUmakefile:	$(QEMU) -nographic $(QEMUOPTS) -S
+GNUmakefile:run-%-nox: prep-% pre-qemu
+GNUmakefile:	$(QEMU) -nographic $(QEMUOPTS)
+conf/env.mk:# If the makefile cannot find your QEMU binary, uncomment the
+grade-lab3:            no=['1/0 is ........!'])
+grade-lab3:            no=['I read ........ from location 0!'])
+grade-lab3:            no=['I read ........ from location 0xf0100000!'])
+grade-lab3:            no=['.00001000. free env 00001000'])
+grade-lab3:            'Destroyed the only environment - nothing more to do!')
+grade-lab3:            no=['hello, world'])
+kern/lapic.c:// The local APIC manages internal (non-I/O) interrupts.
+kern/lapic.c:	// we do not need to program the IOAPIC.
+kern/lapic.c:	// Enable interrupts on the APIC (but not on the processor).
+kern/lapic.c:// Acknowledge interrupt.
+kern/lapic.c:	// should be ignored, but it is part of the official Intel algorithm.
+kern/spinlock.h:	// another CPU has even been given a chance to acquire it.
+kern/console.h:# error "This is a JOS kernel header; user programs should not #include it"
+kern/kdebug.h:					//  - Note: not null terminated!
+kern/Makefrag:KERN_LDFLAGS := $(LDFLAGS) -T kern/kernel.ld -nostdlib
+kern/Makefrag:			user/faultnostack \
+kern/Makefrag:	$(V)$(CC) -nostdinc $(KERN_CFLAGS) -c -o $@ $<
+kern/Makefrag:	$(V)$(CC) -nostdinc $(KERN_CFLAGS) -c -o $@ $<
+kern/Makefrag:	$(V)$(CC) -nostdinc $(KERN_CFLAGS) -c -o $@ $<
+kern/Makefrag:	$(V)dd if=$(OBJDIR)/boot/boot of=$(OBJDIR)/kern/kernel.img~ conv=notrunc 2>/dev/null
+kern/Makefrag:	$(V)dd if=$(OBJDIR)/kern/kernel of=$(OBJDIR)/kern/kernel.img~ seek=1 conv=notrunc 2>/dev/null
+kern/mpentry.S:# Each non-boot CPU ("AP") is started up in response to a STARTUP
+kern/mpentry.S:# the STARTUP IPI, and waits for this code to acknowledge that it has
+kern/mpentry.S:#    - it does not need to enable A20
+kern/mpentry.S:	# Set up initial page table. We cannot use kern_pgdir yet because
+kern/mpentry.S:	nop
+kern/monitor.h:# error "This is a JOS kernel header; user programs should not #include it"
+kern/monitor.h:// (NULL if none).
+kern/entry.S:	# now to C code
+kern/mpconfig.c:// 2) if there is no EBDA, in the last KB of system base memory;
+kern/mpconfig.c:	// starting at byte 0x0E of the BDA.  0 if not present.
+kern/mpconfig.c:// Search for an MP configuration table.  For now, don't accept the
+kern/mpconfig.c:		cprintf("SMP: Default configurations not implemented\n");
+kern/mpconfig.c:			cprintf("mpinit: unknown config type %x\n", *p);
+kern/mpconfig.c:		// Didn't like what we found; fall back to no MP.
+kern/mpconfig.c:		cprintf("SMP: configuration not found, SMP disabled\n");
+kern/pmap.c:// If n>0, allocates enough pages of contiguous physical memory to hold 'n'
+kern/pmap.c:	   // the first virtual address that the linker did *not* assign
+kern/pmap.c:	   // Allocate a chunk large enough to hold 'n' bytes, then update
+kern/pmap.c:// From UTOP to ULIM, the user is allowed to read but not write.
+kern/pmap.c:// Above ULIM the user cannot read or write.
+kern/pmap.c:	   //	   panic("mem_init: This function is not finished\n");
+kern/pmap.c:	   // (For now, you don't have understand the greater purpose of the
+kern/pmap.c:	   // particular, we can now map memory using boot_map_region
+kern/pmap.c:	   //     * [KSTACKTOP-PTSIZE, KSTACKTOP-KSTKSIZE) -- not backed; so if
+kern/pmap.c:	   //       overwrite memory.  Known as a "guard page".
+kern/pmap.c:	   // We might not have 2^32 - KERNBASE bytes of physical memory, but
+kern/pmap.c:	   // somewhere between KERNBASE and KERNBASE+4MB right now, which is
+kern/pmap.c:	   //          -- not backed; so if the kernel overflows its stack,
+kern/pmap.c:	   //             it will fault rather than overwrite another CPU's stack.
+kern/pmap.c:	   //             Known as a "guard page".
+kern/pmap.c:	   // However this is not truly the case.  What memory is free?
+kern/pmap.c:	   // Hint: You may want to panic if pp->pp_ref is nonzero or
+kern/pmap.c:	   // pp->pp_link is not NULL.
+kern/pmap.c:// freeing it if there are no more refs.
+kern/pmap.c:// The relevant page table page might not exist yet.
+kern/pmap.c:// above UTOP. As such, it should *not* change the pp_ref field on the
+kern/pmap.c:		 panic ("boot_map_region cannot be executed \n");
+kern/pmap.c:	   uint32_t no_pages = size / PGSIZE;
+kern/pmap.c:	   for (int i = 0; i < no_pages; i ++)
+kern/pmap.c:// However, try not to distinguish this case in your code, as this
+kern/pmap.c:// If pte_store is not zero, then we store in it the address
+kern/pmap.c:// but should not be used by most callers.
+kern/pmap.c:// Return NULL if there is no page mapped at va.
+kern/pmap.c:// If there is no physical page at that address, silently does nothing.
+kern/pmap.c:// location.  Return the base of the reserved region.  size does *not*
+kern/pmap.c:	   // [base,base+size).  Since this is device memory and not
+kern/pmap.c:	   //panic("mmio_map_region not implemented");
+kern/pmap.c:// Normally 'perm' will contain PTE_U at least, but this is not required.
+kern/pmap.c:// 'va' and 'len' need not be page-aligned; you must test every page that
+kern/pmap.c:// If it cannot, 'env' is destroyed and, if env is the current
+kern/pmap.c:// environment, this function will not return.
+kern/pmap.c:			 env_destroy(env);	// may not return
+kern/pmap.c:			 // list, since entry_pgdir does not map all pages.
+kern/pmap.c:	   // should be no free memory
+kern/pmap.c:// defined by the page directory 'pgdir'.  The hardware normally performs
+kern/pmap.c:	   // should be no free memory
+kern/pmap.c:	   // there is no page allocated at address 0
+kern/pmap.c:	   // there is no free memory, so we can't allocate a page table
+kern/pmap.c:	   // should be no free memory
+kern/pmap.c:	   // should not be able to map at PTSIZE because need free page for page table
+kern/pmap.c:	   // should have pp1 at both 0 and PGSIZE, pp2 nowhere, ...
+kern/pmap.c:	   // should be no free memory
+kern/pmap.h:# error "This is a JOS kernel header; user programs should not #include it"
+kern/pmap.h: * non-kernel virtual address.
+kern/picirq.c:	//    i:  0 = no ICW4, 1 = ICW4 required
+kern/picirq.c:	//	  (ignored when b is 0, as the master/slave role
+kern/picirq.c:	//    p:  0 = no polling, 1 = polling mode
+kern/picirq.h:# error "This is a JOS kernel header; user programs should not #include it"
+kern/env.h:void	env_destroy(struct Env *e);	// Does not return if e == curenv
+kern/env.h:// The following two functions do not return
+kern/env.h:void	env_run(struct Env *e) __attribute__((noreturn));
+kern/env.h:void	env_pop_tf(struct Trapframe *tf) __attribute__((noreturn));
+kern/sched.h:# error "This is a JOS kernel header; user programs should not #include it"
+kern/sched.h:// This function does not return.
+kern/sched.h:void sched_yield(void) __attribute__((noreturn));
+kern/COPYRIGHT: * Copyright (C) 1997 Massachusetts Institute of Technology 
+kern/COPYRIGHT: * the copyright notices, if any, listed below.
+kern/COPYRIGHT: *    notice, this list of conditions and the following disclaimer.
+kern/COPYRIGHT: *    notice, this list of conditions and the following disclaimer in the
+kern/COPYRIGHT: *    must display the following acknowledgement:
+kern/COPYRIGHT: * 4. Neither the name of the University nor the names of its contributors
+kern/COPYRIGHT: * of this file is covered by the copyright notices, if any, listed below.
+kern/COPYRIGHT: *    notice, this list of conditions and the following disclaimer.
+kern/COPYRIGHT: *    notice, this list of conditions and the following disclaimer in the
+kern/COPYRIGHT: *    must display the following acknowledgement:
+kern/COPYRIGHT: * 4. Neither the name of the University nor the names of its contributors
+kern/trap.h:# error "This is a JOS kernel header; user programs should not #include it"
+kern/kclock.h:# error "This is a JOS kernel header; user programs should not #include it"
+kern/trap.c:static const char *trapname(int trapno)
+kern/trap.c:			 "(unknown trap)",
+kern/trap.c:	   if (trapno < ARRAY_SIZE(excnames))
+kern/trap.c:			 return excnames[trapno];
+kern/trap.c:	   if (trapno == T_SYSCALL)
+kern/trap.c:	   if (trapno >= IRQ_OFFSET && trapno < IRQ_OFFSET + 16)
+kern/trap.c:	   return "(unknown trap)";
+kern/trap.c:	   //     from doing IO (0 is not the correct value!)
+kern/trap.c:	   // wrong, you may not get a fault until you try to return from
+kern/trap.c:	   cprintf("  trap 0x%08x %s\n", tf->tf_trapno, trapname(tf->tf_trapno));
+kern/trap.c:	   if (tf == last_tf && tf->tf_trapno == T_PGFLT)
+kern/trap.c:	   // PR=a protection violation caused the fault (NP=page not present).
+kern/trap.c:	   if (tf->tf_trapno == T_PGFLT)
+kern/trap.c:						  tf->tf_err & 1 ? "protection" : "not-present");
+kern/trap.c:	   if (tf -> tf_trapno == T_PGFLT)
+kern/trap.c:	   } else if (tf -> tf_trapno == T_BRKPT)
+kern/trap.c:	   } else if (tf -> tf_trapno == T_SYSCALL)
+kern/trap.c:	   // The hardware sometimes raises these because of noise on the
+kern/trap.c:	   if (tf->tf_trapno == IRQ_OFFSET + IRQ_SPURIOUS) {
+kern/trap.c:	   // Handle clock interrupts. Don't forget to acknowledge the
+kern/trap.c:	   /*	   if (tf -> tf_trapno == IRQ_OFFSET + IRQ_TIMER)
+kern/trap.c:			cprintf("0x%08x", tf -> tf_trapno);
+kern/trap.c:			panic("Interrupts are not disabled \n");
+kern/trap.c:			 // The trapframe on the stack should be ignored from here on.
+kern/trap.c:	   // If we made it to this point, then no other environment was
+kern/trap.c:	   // The page fault upcall might cause another page fault, in which case
+kern/trap.c:	   // we branch to the page fault upcall recursively, pushing another
+kern/trap.c:	   // the non-recursive case, we don't have to worry about this because
+kern/trap.c:	   // If there's no page fault upcall, the environment didn't allocate a
+kern/trap.c:	   // none.  The remaining three checks can be combined into a single test.
+kern/trap.c:			 cprintf("no page fault upcall. envid: %x\n", curenv->env_id);
+kern/syscall.c:	   // Destroy the environment if not.
+kern/syscall.c:// Returns the character, or 0 if there is no input waiting.
+kern/syscall.c://	-E_NO_FREE_ENV if no free environment is available.
+kern/syscall.c:	   //panic("sys_exofork not implemented");
+kern/syscall.c://	-E_INVAL if status is not a valid status for an environment.
+kern/syscall.c:	   //panic("sys_env_set_status not implemented");
+kern/syscall.c:	   //panic("sys_env_set_pgfault_upcall not implemented");
+kern/syscall.c:// perm -- PTE_U | PTE_P must be set, PTE_AVAIL | PTE_W may or may not be set,
+kern/syscall.c://         but no other bits may be set.  See PTE_SYSCALL in inc/mmu.h.
+kern/syscall.c://	-E_INVAL if va >= UTOP, or va is not page-aligned.
+kern/syscall.c://	-E_NO_MEM if there's no memory to allocate the new page,
+kern/syscall.c:	   //panic("sys_page_alloc not implemented");
+kern/syscall.c:// that it also must not grant write access to a read-only
+kern/syscall.c://	-E_INVAL if srcva >= UTOP or srcva is not page-aligned,
+kern/syscall.c://		or dstva >= UTOP or dstva is not page-aligned.
+kern/syscall.c://	-E_INVAL is srcva is not mapped in srcenvid's address space.
+kern/syscall.c://	-E_NO_MEM if there's no memory to allocate any necessary page tables.
+kern/syscall.c:	   //panic("sys_page_map not implemented");
+kern/syscall.c:// If no page is mapped, the function silently succeeds.
+kern/syscall.c://	-E_INVAL if va >= UTOP, or va is not page-aligned.
+kern/syscall.c:	   //panic("sys_page_unmap not implemented");
+kern/syscall.c:// target is not blocked, waiting for an IPC.
+kern/syscall.c:// then no page mapping is transferred, but no error occurs.
+kern/syscall.c:// The ipc only happens when no errors occur.
+kern/syscall.c://	-E_IPC_NOT_RECV if envid is not currently blocked in sys_ipc_recv,
+kern/syscall.c://		or another environment managed to send first.
+kern/syscall.c://	-E_INVAL if srcva < UTOP but srcva is not page-aligned.
+kern/syscall.c://	-E_INVAL if srcva < UTOP but srcva is not mapped in the caller's
+kern/syscall.c://	-E_NO_MEM if there's not enough memory to map srcva in envid's
+kern/syscall.c:	   panic("sys_ipc_try_send not implemented");
+kern/syscall.c:// mark yourself not runnable, and then give up the CPU.
+kern/syscall.c://	-E_INVAL if dstva < UTOP but dstva is not page-aligned.
+kern/syscall.c:	   panic("sys_ipc_recv not implemented");
+kern/syscall.c:syscall(uint32_t syscallno, uint32_t a1, uint32_t a2, uint32_t a3, uint32_t a4, uint32_t a5)
+kern/syscall.c:	   // Call the function corresponding to the 'syscallno' parameter.
+kern/syscall.c:	   //	panic("syscall not implemented");
+kern/syscall.c:	   switch (syscallno) {
+kern/kernel.ld:		*(.eh_frame .note.GNU-stack .comment .note)
+kern/monitor.c:#define CMDBUF_SIZE	80	// enough for one VGA text line
+kern/monitor.c:	   cprintf("Unknown command '%s'\n", argv[0]);
+kern/console.c:	// if no attribute given, then use black on white
+kern/console.c:static uint8_t normalmap[256] =
+kern/console.c:	normalmap,
+kern/console.c: * Return -1 if no data.
+kern/console.c:	// Ignore data from mouse.
+kern/console.c:// return the next input character from the console, or 0 if none waiting
+kern/console.c:		cprintf("Serial port does not exist!\n");
+kern/console.c:		/* do nothing */;
+kern/sched.c:	   // If no envs are runnable, but the environment previously
+kern/sched.c:	   // another CPU (env_status == ENV_RUNNING). If there are
+kern/sched.c:	   // no runnable environments, simply drop through to the code
+kern/sched.c:// Halt this CPU when there is nothing to do. Wait until the
+kern/sched.c:	   // For debugging and testing purposes, if there are no runnable
+kern/sched.c:	   // Mark that no environment is running on this CPU
+kern/sched.c:	   // timer interupts come in, we know we should re-acquire the
+kern/spinlock.c:		panic("CPU %d cannot acquire %s: already holding", cpunum(), lk->name);
+kern/spinlock.c:	// It also serializes, so that reads after acquire are not
+kern/spinlock.c:		cprintf("CPU %d cannot release %s: held by CPU %d\nAcquired at:", 
+kern/spinlock.c:	// x86 CPUs will not reorder loads/stores across locked instructions
+kern/spinlock.c:	// gcc will not reorder C statements across the xchg.
+kern/env.c:	   // to ensure that the envid is not stale
+kern/env.c:	   // (i.e., does not refer to a _previous_ environment
+kern/env.c://	-E_NO_MEM if page directory or table could not be allocated.
+kern/env.c:	   //    - You do not need to make any more calls to page_alloc.
+kern/env.c:	   //    - Note: In general, pp_ref is not maintained for
+kern/env.c:// Does not zero or otherwise initialize the mapped pages in any way.
+kern/env.c:	   //   'va' and 'len' values that are not page-aligned.
+kern/env.c:// but not actually present in the ELF file - i.e., the program's bss section.
+kern/env.c:	   //  All page protection bits should be user read/write for now.
+kern/env.c:	   //  ELF segments are not necessarily page-aligned, but you can
+kern/env.c:	   //  assume for this function that no two segments will touch
+kern/env.c:	   uint32_t pdeno, pteno;
+kern/env.c:	   for (pdeno = 0; pdeno < PDX(UTOP); pdeno++) {
+kern/env.c:			 if (!(e->env_pgdir[pdeno] & PTE_P))
+kern/env.c:			 pa = PTE_ADDR(e->env_pgdir[pdeno]);
+kern/env.c:			 for (pteno = 0; pteno <= PTX(~0); pteno++) {
+kern/env.c:				    if (pt[pteno] & PTE_P)
+kern/env.c:						  page_remove(e->env_pgdir, PGADDR(pdeno, pteno, 0));
+kern/env.c:			 e->env_pgdir[pdeno] = 0;
+kern/env.c:// If e was the current env, then runs a new environment (and does not return
+kern/env.c:// This function does not return.
+kern/env.c:				    "\taddl $0x8,%%esp\n" /* skip tf_trapno and tf_errcode */
+kern/env.c:// This function does not return.
+kern/env.c:	   //	panic("env_run not yet implemented");
+kern/init.c:	// Starting non-boot CPUs
+kern/init.c:	// We only have one user environment for now, so just run it.
+kern/init.c:// Start the non-boot (AP) processors.
+kern/init.c:	// We are in high EIP now, safe to switch to kern_pgdir 
+kern/entrypgdir.c:// table and it's enough to get us through early boot.  We also map
+kern/syscall.h:# error "This is a JOS kernel header; user programs should not #include it"
+kern/kdebug.c://	*region_left > *region_right, then 'addr' is not contained in any
+kern/kdebug.c:			 if (m < l) {	// no match in [l, m]
+kern/kdebug.c:				    /* do nothing */;
+kern/kdebug.c://	negative if not.  But even if it returns negative it has stored some
+kern/kdebug.c:	   info->eip_file = "<unknown>";
+kern/kdebug.c:	   info->eip_fn_name = "<unknown>";
+kern/kdebug.c:			 // Return -1 if it is not.  Hint: Call user_mem_check.
+kern/kdebug.c:	   // Ignore stuff after the colon.
+kern/kdebug.c:	   // If not found, return -1.
+kern/kdebug.c:	   // or 0 if there was no containing function.
+jos.out.primes:[00001000] user panic in <unknown> at lib/fork.c:81: fork not implemented
+jos.out.pingpong:[00001000] user panic in <unknown> at lib/fork.c:81: fork not implemented
+user/user.ld:		*(.eh_frame .note.GNU-stack .comment)
+user/Makefrag:	$(V)$(CC) -nostdinc $(USER_CFLAGS) -c -o $@ $<
+user/Makefrag:	$(V)$(LD) -o $@ $(ULDFLAGS) $(LDFLAGS) -nostdlib $(OBJDIR)/lib/entry.o $@.o -L$(OBJDIR)/lib $(USERLIBS:%=-l%) $(GCC_LIB)
+user/faultnostack.c:// test user fault handler being called with no exception stack mapped
+user/spin.c:			/* do nothing */;
+user/dumbfork.c:		// is no longer valid (it refers to the parent!).
+user/faultregs.c:		// Save after eflags (now that stack is back); note
+user/faultregs.c:		// that we were very careful not to modify eflags in
+CODING:  For example, printf("hello") not printf ("hello").
+CODING:  For example, if (x) not if(x).
+CODING:  For example, if (x) { not if (x){.
+CODING:* Beginning-of-line indentation via tabs, not spaces.
+CODING:* Pointer types have spaces: (uint16_t *) not (uint16_t*).
+CODING:* Functions that take no arguments are declared f(void) not f().
+gradelib.py:import sys, os, re, time, socket, select, subprocess, errno, shutil, traceback
+gradelib.py:        if not title:
+gradelib.py:            if not limit or any(l in test.title.lower() for l in limit):
+gradelib.py:        if not limit:
+gradelib.py:    if not CURRENT_TEST:
+gradelib.py:    """Assert that all of regexps match some line in text.  If a 'no'
+gradelib.py:    *not* match any line in text."""
+gradelib.py:    def assert_lines_match_kw(no=[]):
+gradelib.py:        return no
+gradelib.py:    no = assert_lines_match_kw(**kw)
+gradelib.py:            regexps = [r for r in regexps if not re.match(r, line)]
+gradelib.py:        if any(re.match(r, line) for r in no):
+gradelib.py:    if not regexps and not bad:
+gradelib.py:    for lineno in good.union(bad):
+gradelib.py:            show.add(lineno + offset)
+gradelib.py:    for lineno in sorted(show):
+gradelib.py:        if 0 <= lineno < len(lines):
+gradelib.py:            if lineno != last + 1:
+gradelib.py:            last = lineno
+gradelib.py:            msg.append("%s %s" % (color("red", "BAD ") if lineno in bad else
+gradelib.py:                                  color("green", "GOOD") if lineno in good
+gradelib.py:                                  lines[lineno]))
+gradelib.py:            if e.errno != errno.ENOENT:
+gradelib.py:        # Check that QEMU is not currently running
+gradelib.py:        cmd = ("make", "-s", "--no-print-directory") + make_args
+gradelib.py:            p = Popen(["make", "-s", "--no-print-directory", "print-gdbport"],
+gradelib.py:    def fileno(self):
+gradelib.py:            return self.proc.stdout.fileno()
+gradelib.py:        buf = os.read(self.proc.stdout.fileno(), 4096)
+gradelib.py:    def fileno(self):
+gradelib.py:            return self.sock.fileno()
+gradelib.py:            if not m:
+gradelib.py:        self.qemu = QEMU(target_base + "-nox-gdb", *make_args)
+gradelib.py:        if not len(output):
+gradelib.py:                rset = [r for r in reactors if r.fileno() is not None]
+gradelib.py:                if not rset:
+gradelib.py:            assert len(addrs), "Symbol %s not found" % addr
+Binary file gradelib.pyc matches
+inc/x86.h:	// The + in "+m" denotes a read-modify-write operand.
+inc/kbdreg.h:#define	 KBS_NOSEC	0x10	/* kbd security lock not engaged */
+inc/kbdreg.h:#define	KC8_IGNSEC	0x08	/* ignore security lock */
+inc/kbdreg.h:#define	KBR_FAILURE	0xFD	/* diagnosic failure */
+inc/assert.h:void _panic(const char*, int, const char*, ...) __attribute__((noreturn));
+inc/COPYRIGHT: * Copyright (C) 1997 Massachusetts Institute of Technology 
+inc/COPYRIGHT: * the copyright notices, if any, listed below.
+inc/COPYRIGHT: *    notice, this list of conditions and the following disclaimer.
+inc/COPYRIGHT: *    notice, this list of conditions and the following disclaimer in the
+inc/COPYRIGHT: *    must display the following acknowledgement:
+inc/COPYRIGHT: * 4. Neither the name of the University nor the names of its contributors
+inc/COPYRIGHT: *    notice, this list of conditions and the following disclaimer.
+inc/COPYRIGHT: *    notice, this list of conditions and the following disclaimer in the
+inc/COPYRIGHT: *    must display the following acknowledgement:
+inc/COPYRIGHT: * 4. Neither the name of the University nor the names of its contributors
+inc/COPYRIGHT: *    notice, this list of conditions and the following disclaimer.
+inc/COPYRIGHT: *    notice, this list of conditions and the following disclaimer in the
+inc/COPYRIGHT: *    must display the following acknowledgement:
+inc/COPYRIGHT: * 4. Neither the name of the University nor the names of its contributors
+inc/error.h:	E_UNSPECIFIED	= 1,	// Unspecified or unknown problem
+inc/error.h:				// cannot be used in requested action
+inc/error.h:	E_IPC_NOT_RECV	,	// Attempt to send to env that is not recving
+inc/trap.h:#define T_NMI        2		// non-maskable interrupt
+inc/trap.h:#define T_DEVICE     7		// device not available
+inc/trap.h:/* #define T_COPROC  9 */	// reserved (not generated by recent processors)
+inc/trap.h:#define T_SEGNP     11		// segment not present
+inc/trap.h:// These are arbitrarily chosen, but with care not to overlap
+inc/trap.h:	uint32_t tf_trapno;
+inc/mmu.h:// Flags in PTE_SYSCALL may be used in system calls.  (Others may not.)
+inc/mmu.h:#else	// not __ASSEMBLER__
+inc/mmu.h:#define STA_E		0x4	    // Expand down (non-executable segments)
+inc/mmu.h:#define STA_W		0x2	    // Writeable (non-executable segments)
+inc/mmu.h:// Set up a normal interrupt/trap gate descriptor.
+inc/mmu.h:    //   stack. An interrupt through a trap gate does not change IF."
+inc/memlayout.h:#endif /* not __ASSEMBLER__ */
+inc/memlayout.h: *     "Empty Memory" is normally unmapped, but user programs may map pages
+inc/memlayout.h:// Top of normal user stack
+inc/memlayout.h:// (should not conflict with other temporary page mappings)
+inc/memlayout.h:// Physical address of startup code for non-boot CPUs (APs)
+inc/memlayout.h:	// boot_alloc do not have valid reference count fields.
+inc/lib.h:#define	O_CREAT		0x0100		/* create if nonexistent */
+inc/lib.h:#define O_MKDIR		0x0800		/* create directory, not regular file */
+inc/string.h:#endif /* not JOS_INC_STRING_H */
+inc/elf.h:	uint32_t p_align;	//Specifies alignment. Should be an integral of two. 0 or 1 specifies no alignment.
+avanaik@AVNaik:~/Study/Advanced_OS/QEMU/qemu/Labs/lab$ 
+
